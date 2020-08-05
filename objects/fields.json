@@ -1,0 +1,849 @@
+[
+  {
+    "qIsHidden": true,
+    "qIsSystem": true,
+    "qName": "$Field",
+    "qCardinal": 72,
+    "qTags": [
+      "$text",
+      "$key",
+      "$hidden",
+      "$system"
+    ],
+    "qSrcTables": []
+  },
+  {
+    "qIsHidden": true,
+    "qIsSystem": true,
+    "qName": "$FieldNo",
+    "qCardinal": 45,
+    "qTags": [
+      "$numeric",
+      "$integer",
+      "$hidden",
+      "$system"
+    ],
+    "qSrcTables": []
+  },
+  {
+    "qIsHidden": true,
+    "qIsSystem": true,
+    "qName": "$Fields",
+    "qCardinal": 7,
+    "qTags": [
+      "$numeric",
+      "$integer",
+      "$hidden",
+      "$system"
+    ],
+    "qSrcTables": []
+  },
+  {
+    "qIsHidden": true,
+    "qIsSystem": true,
+    "qName": "$Info",
+    "qCardinal": 1,
+    "qTags": [
+      "$text",
+      "$ascii",
+      "$hidden",
+      "$system"
+    ],
+    "qSrcTables": []
+  },
+  {
+    "qIsHidden": true,
+    "qIsSystem": true,
+    "qName": "$Rows",
+    "qCardinal": 8,
+    "qTags": [
+      "$numeric",
+      "$integer",
+      "$hidden",
+      "$system"
+    ],
+    "qSrcTables": []
+  },
+  {
+    "qIsHidden": true,
+    "qIsSystem": true,
+    "qName": "$Table",
+    "qCardinal": 8,
+    "qTags": [
+      "$text",
+      "$key",
+      "$hidden",
+      "$system"
+    ],
+    "qSrcTables": []
+  },
+  {
+    "qName": "OpenDate",
+    "qCardinal": 63,
+    "qTags": [
+      "$numeric",
+      "$integer",
+      "$timestamp",
+      "$date"
+    ],
+    "qSrcTables": [
+      "Факты"
+    ]
+  },
+  {
+    "qName": "bDeliverInTime",
+    "qCardinal": 2,
+    "qTags": [
+      "$numeric",
+      "$integer"
+    ],
+    "qSrcTables": [
+      "Факты"
+    ]
+  },
+  {
+    "qName": "bDeliverLater",
+    "qCardinal": 2,
+    "qTags": [
+      "$numeric",
+      "$integer"
+    ],
+    "qSrcTables": [
+      "Факты"
+    ]
+  },
+  {
+    "qName": "bDeliverNotLater",
+    "qCardinal": 2,
+    "qTags": [
+      "$numeric",
+      "$integer"
+    ],
+    "qSrcTables": [
+      "Факты"
+    ]
+  },
+  {
+    "qName": "bLFLMonth",
+    "qCardinal": 2,
+    "qTags": [
+      "$numeric",
+      "$integer"
+    ],
+    "qSrcTables": [
+      "Факты"
+    ]
+  },
+  {
+    "qName": "bLFLWeek",
+    "qCardinal": 2,
+    "qTags": [
+      "$numeric",
+      "$integer"
+    ],
+    "qSrcTables": [
+      "Факты"
+    ]
+  },
+  {
+    "qName": "bNonFood",
+    "qCardinal": 2,
+    "qTags": [
+      "$numeric",
+      "$integer"
+    ],
+    "qSrcTables": [
+      "Группы и категории товаров"
+    ]
+  },
+  {
+    "qName": "bSOF",
+    "qCardinal": 2,
+    "qTags": [
+      "$numeric",
+      "$integer"
+    ],
+    "qSrcTables": [
+      "Группы и категории товаров"
+    ]
+  },
+  {
+    "qName": "bTemplate310",
+    "qCardinal": 2,
+    "qTags": [
+      "$numeric",
+      "$integer"
+    ],
+    "qSrcTables": [
+      "Шаблоны списаний"
+    ]
+  },
+  {
+    "qName": "bTemplate310_721",
+    "qCardinal": 2,
+    "qTags": [
+      "$numeric",
+      "$integer"
+    ],
+    "qSrcTables": [
+      "Шаблоны списаний"
+    ]
+  },
+  {
+    "qName": "bTemplate721",
+    "qCardinal": 2,
+    "qTags": [
+      "$numeric",
+      "$integer"
+    ],
+    "qSrcTables": [
+      "Шаблоны списаний"
+    ]
+  },
+  {
+    "qName": "keyPlanSales",
+    "qCardinal": 1041,
+    "qTags": [
+      "$numeric",
+      "$integer",
+      "$key"
+    ],
+    "qSrcTables": [
+      "Плановые продажи",
+      "Факты"
+    ]
+  },
+  {
+    "qName": "Аббр. филиала",
+    "qCardinal": 78,
+    "qTags": [
+      "$text"
+    ],
+    "qSrcTables": [
+      "Филиалы"
+    ]
+  },
+  {
+    "qName": "Год",
+    "qCardinal": 3,
+    "qTags": [
+      "$numeric",
+      "$integer"
+    ],
+    "qSrcTables": [
+      "Факты"
+    ]
+  },
+  {
+    "qName": "Год прихода",
+    "qCardinal": 3,
+    "qTags": [
+      "$numeric",
+      "$integer"
+    ],
+    "qSrcTables": [
+      "Факты"
+    ]
+  },
+  {
+    "qName": "Город",
+    "qCardinal": 8,
+    "qTags": [
+      "$text"
+    ],
+    "qSrcTables": [
+      "Филиалы"
+    ]
+  },
+  {
+    "qName": "Группа",
+    "qCardinal": 289,
+    "qTags": [
+      "$text"
+    ],
+    "qSrcTables": [
+      "Группы и категории товаров"
+    ]
+  },
+  {
+    "qName": "Дата открытия",
+    "qCardinal": 62,
+    "qTags": [
+      "$numeric",
+      "$integer",
+      "$timestamp",
+      "$date"
+    ],
+    "qSrcTables": [
+      "Филиалы"
+    ]
+  },
+  {
+    "qName": "Дата понедельника",
+    "qCardinal": 18,
+    "qTags": [
+      "$numeric",
+      "$integer",
+      "$timestamp",
+      "$date"
+    ],
+    "qSrcTables": [
+      "Факты"
+    ]
+  },
+  {
+    "qName": "Долгота",
+    "qCardinal": 56,
+    "qTags": [],
+    "qSrcTables": [
+      "Филиалы"
+    ]
+  },
+  {
+    "qName": "Квартал",
+    "qCardinal": 4,
+    "qTags": [
+      "$numeric",
+      "$integer"
+    ],
+    "qSrcTables": [
+      "Факты"
+    ]
+  },
+  {
+    "qName": "Код компании",
+    "qCardinal": 78,
+    "qTags": [
+      "$numeric",
+      "$integer",
+      "$key"
+    ],
+    "qSrcTables": [
+      "Филиалы",
+      "Факты"
+    ]
+  },
+  {
+    "qName": "Код подгруппы",
+    "qCardinal": 1533,
+    "qTags": [
+      "$numeric",
+      "$integer",
+      "$key"
+    ],
+    "qSrcTables": [
+      "Товар",
+      "Группы и категории товаров"
+    ]
+  },
+  {
+    "qName": "Код поставщика",
+    "qCardinal": 13511,
+    "qTags": [
+      "$numeric",
+      "$integer",
+      "$key"
+    ],
+    "qSrcTables": [
+      "Поставщики",
+      "Факты"
+    ]
+  },
+  {
+    "qName": "Код типа документа",
+    "qCardinal": 1,
+    "qTags": [
+      "$numeric",
+      "$integer"
+    ],
+    "qSrcTables": [
+      "Шаблоны списаний"
+    ]
+  },
+  {
+    "qName": "Код типа операции",
+    "qCardinal": 3,
+    "qTags": [
+      "$numeric",
+      "$integer",
+      "$key"
+    ],
+    "qSrcTables": [
+      "Факты",
+      "Тип операции"
+    ]
+  },
+  {
+    "qName": "Код типа продажи",
+    "qCardinal": 2,
+    "qTags": [
+      "$numeric",
+      "$integer"
+    ],
+    "qSrcTables": [
+      "Факты"
+    ]
+  },
+  {
+    "qName": "Код товара",
+    "qCardinal": 210193,
+    "qTags": [
+      "$numeric",
+      "$integer",
+      "$key"
+    ],
+    "qSrcTables": [
+      "Товар",
+      "Факты"
+    ]
+  },
+  {
+    "qName": "Код шаблона",
+    "qCardinal": 5631,
+    "qTags": [
+      "$numeric",
+      "$integer",
+      "$key"
+    ],
+    "qSrcTables": [
+      "Шаблоны списаний",
+      "Факты"
+    ]
+  },
+  {
+    "qName": "Количество заказа",
+    "qCardinal": 7362,
+    "qTags": [
+      "$numeric"
+    ],
+    "qSrcTables": [
+      "Факты"
+    ]
+  },
+  {
+    "qName": "Количество прихода",
+    "qCardinal": 40145,
+    "qTags": [
+      "$numeric"
+    ],
+    "qSrcTables": [
+      "Факты"
+    ]
+  },
+  {
+    "qName": "Количество продаж",
+    "qCardinal": 160896,
+    "qTags": [
+      "$numeric"
+    ],
+    "qSrcTables": [
+      "Факты"
+    ]
+  },
+  {
+    "qName": "Количество рознично-акционных продаж",
+    "qCardinal": 54381,
+    "qTags": [
+      "$numeric",
+      "$integer"
+    ],
+    "qSrcTables": [
+      "Факты"
+    ]
+  },
+  {
+    "qName": "Количество списания",
+    "qCardinal": 152582,
+    "qTags": [
+      "$numeric"
+    ],
+    "qSrcTables": [
+      "Факты"
+    ]
+  },
+  {
+    "qName": "Координаты_филиала",
+    "qCardinal": 55,
+    "qTags": [
+      "$text",
+      "$ascii",
+      "$geopoint",
+      "$relates_Филиал"
+    ],
+    "qSrcTables": [
+      "Филиалы"
+    ]
+  },
+  {
+    "qName": "Месяц",
+    "qCardinal": 2,
+    "qTags": [
+      "$numeric",
+      "$integer"
+    ],
+    "qSrcTables": [
+      "Факты"
+    ]
+  },
+  {
+    "qName": "Месяц прихода",
+    "qCardinal": 6,
+    "qTags": [
+      "$numeric",
+      "$integer"
+    ],
+    "qSrcTables": [
+      "Факты"
+    ]
+  },
+  {
+    "qName": "Наименование шаблона",
+    "qCardinal": 2893,
+    "qTags": [
+      "$text"
+    ],
+    "qSrcTables": [
+      "Шаблоны списаний"
+    ]
+  },
+  {
+    "qName": "Направление",
+    "qCardinal": 5,
+    "qTags": [
+      "$text"
+    ],
+    "qSrcTables": [
+      "Группы и категории товаров"
+    ]
+  },
+  {
+    "qName": "Неделя",
+    "qCardinal": 6,
+    "qTags": [
+      "$numeric",
+      "$integer"
+    ],
+    "qSrcTables": [
+      "Факты"
+    ]
+  },
+  {
+    "qName": "Неделя прихода",
+    "qCardinal": 19,
+    "qTags": [
+      "$numeric",
+      "$integer"
+    ],
+    "qSrcTables": [
+      "Факты"
+    ]
+  },
+  {
+    "qName": "Неделя-Год",
+    "qCardinal": 18,
+    "qTags": [
+      "$text",
+      "$ascii"
+    ],
+    "qSrcTables": [
+      "Факты"
+    ]
+  },
+  {
+    "qName": "Неделя-Год прихода",
+    "qCardinal": 44,
+    "qTags": [
+      "$text",
+      "$ascii"
+    ],
+    "qSrcTables": [
+      "Факты"
+    ]
+  },
+  {
+    "qName": "Отдел",
+    "qCardinal": 56,
+    "qTags": [
+      "$text"
+    ],
+    "qSrcTables": [
+      "Группы и категории товаров"
+    ]
+  },
+  {
+    "qName": "План.Сумма продаж без НДС",
+    "qCardinal": 276,
+    "qTags": [
+      "$numeric"
+    ],
+    "qSrcTables": [
+      "Плановые продажи"
+    ]
+  },
+  {
+    "qName": "План.Сумма продаж с НДС",
+    "qCardinal": 276,
+    "qTags": [
+      "$numeric"
+    ],
+    "qSrcTables": [
+      "Плановые продажи"
+    ]
+  },
+  {
+    "qName": "Подгруппа",
+    "qCardinal": 1533,
+    "qTags": [
+      "$text"
+    ],
+    "qSrcTables": [
+      "Группы и категории товаров"
+    ]
+  },
+  {
+    "qName": "Поставщик",
+    "qCardinal": 13510,
+    "qTags": [],
+    "qSrcTables": [
+      "Поставщики"
+    ]
+  },
+  {
+    "qName": "Производитель",
+    "qCardinal": 4098,
+    "qTags": [],
+    "qSrcTables": [
+      "Товар"
+    ]
+  },
+  {
+    "qName": "Регион",
+    "qCardinal": 9,
+    "qTags": [
+      "$text"
+    ],
+    "qSrcTables": [
+      "Филиалы"
+    ]
+  },
+  {
+    "qName": "Сумма НДС от продаж в ЗЦ",
+    "qCardinal": 1524992,
+    "qTags": [
+      "$numeric"
+    ],
+    "qSrcTables": [
+      "Факты"
+    ]
+  },
+  {
+    "qName": "Сумма НДС от продаж в ПЦ",
+    "qCardinal": 1158718,
+    "qTags": [
+      "$numeric"
+    ],
+    "qSrcTables": [
+      "Факты"
+    ]
+  },
+  {
+    "qName": "Сумма НДС от рознично-акционных продаж в ЗЦ",
+    "qCardinal": 379322,
+    "qTags": [
+      "$numeric"
+    ],
+    "qSrcTables": [
+      "Факты"
+    ]
+  },
+  {
+    "qName": "Сумма НДС от рознично-акционных продаж в ПЦ",
+    "qCardinal": 276222,
+    "qTags": [
+      "$numeric"
+    ],
+    "qSrcTables": [
+      "Факты"
+    ]
+  },
+  {
+    "qName": "Сумма заказа",
+    "qCardinal": 143547,
+    "qTags": [
+      "$numeric"
+    ],
+    "qSrcTables": [
+      "Факты"
+    ]
+  },
+  {
+    "qName": "Сумма прихода",
+    "qCardinal": 339389,
+    "qTags": [
+      "$numeric"
+    ],
+    "qSrcTables": [
+      "Факты"
+    ]
+  },
+  {
+    "qName": "Сумма продаж по ЗЦ без НДС",
+    "qCardinal": 1609403,
+    "qTags": [
+      "$numeric"
+    ],
+    "qSrcTables": [
+      "Факты"
+    ]
+  },
+  {
+    "qName": "Сумма продаж по ЗЦ рознично-акционная без НДС",
+    "qCardinal": 420749,
+    "qTags": [
+      "$numeric"
+    ],
+    "qSrcTables": [
+      "Факты"
+    ]
+  },
+  {
+    "qName": "Сумма продаж по ЗЦ рознично-акционная с НДС",
+    "qCardinal": 393320,
+    "qTags": [
+      "$numeric"
+    ],
+    "qSrcTables": [
+      "Факты"
+    ]
+  },
+  {
+    "qName": "Сумма продаж по ЗЦ с НДС",
+    "qCardinal": 1565136,
+    "qTags": [
+      "$numeric"
+    ],
+    "qSrcTables": [
+      "Факты"
+    ]
+  },
+  {
+    "qName": "Сумма продаж по ПЦ без НДС",
+    "qCardinal": 1143616,
+    "qTags": [
+      "$numeric"
+    ],
+    "qSrcTables": [
+      "Факты"
+    ]
+  },
+  {
+    "qName": "Сумма продаж по ПЦ рознично-акционная без НДС",
+    "qCardinal": 271582,
+    "qTags": [
+      "$numeric"
+    ],
+    "qSrcTables": [
+      "Факты"
+    ]
+  },
+  {
+    "qName": "Сумма продаж по ПЦ рознично-акционная с НДС",
+    "qCardinal": 202187,
+    "qTags": [
+      "$numeric",
+      "$integer"
+    ],
+    "qSrcTables": [
+      "Факты"
+    ]
+  },
+  {
+    "qName": "Сумма продаж по ПЦ с НДС",
+    "qCardinal": 954101,
+    "qTags": [
+      "$numeric"
+    ],
+    "qSrcTables": [
+      "Факты"
+    ]
+  },
+  {
+    "qName": "Сумма списания без НДС",
+    "qCardinal": 1227148,
+    "qTags": [
+      "$numeric"
+    ],
+    "qSrcTables": [
+      "Факты"
+    ]
+  },
+  {
+    "qName": "Сумма списания с НДС",
+    "qCardinal": 1228237,
+    "qTags": [
+      "$numeric"
+    ],
+    "qSrcTables": [
+      "Факты"
+    ]
+  },
+  {
+    "qName": "Тип операции",
+    "qCardinal": 3,
+    "qTags": [
+      "$text"
+    ],
+    "qSrcTables": [
+      "Тип операции"
+    ]
+  },
+  {
+    "qName": "Тип продажи",
+    "qCardinal": 2,
+    "qTags": [
+      "$text"
+    ],
+    "qSrcTables": [
+      "Факты"
+    ]
+  },
+  {
+    "qName": "Товар",
+    "qCardinal": 210181,
+    "qTags": [],
+    "qSrcTables": [
+      "Товар"
+    ]
+  },
+  {
+    "qName": "Филиал",
+    "qCardinal": 78,
+    "qTags": [
+      "$text",
+      "$geoname",
+      "$relates_Координаты_филиала"
+    ],
+    "qSrcTables": [
+      "Филиалы"
+    ]
+  },
+  {
+    "qName": "Формат",
+    "qCardinal": 4,
+    "qTags": [
+      "$text",
+      "$ascii"
+    ],
+    "qSrcTables": [
+      "Филиалы"
+    ]
+  },
+  {
+    "qName": "Широта",
+    "qCardinal": 56,
+    "qTags": [],
+    "qSrcTables": [
+      "Филиалы"
+    ]
+  }
+]

@@ -1,0 +1,24 @@
+///$tab Плановые продажи
+PlanSales:
+LOAD
+//     Дата,
+//     "Код компании",
+    AutoNumberHash128(Неделя,Месяц,Год,"Код компании") as keyPlanSales,
+    Неделя&'-'&Год as weekYearPlan,
+    "План продаж без НДС" as "План.Сумма продаж без НДС",
+    "План продаж с НДС" as "План.Сумма продаж с НДС"
+FROM [lib://Data/Magnum/QS Data/Stage-1/Плановые продажи по неделям.qvd]//[lib://Stage-1/Плановые продажи по неделям.qvd] 
+(qvd)
+;
+
+
+
+"Плановые продажи":
+Load 
+	keyPlanSales,
+    "План.Сумма продаж без НДС",
+    "План.Сумма продаж с НДС"
+Resident PlanSales 
+where Exists("Неделя-Год",weekYearPlan);
+
+drop table PlanSales;

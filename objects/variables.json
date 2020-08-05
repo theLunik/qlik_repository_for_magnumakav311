@@ -1,0 +1,191 @@
+[
+  {
+    "qInfo": {
+      "qId": "06260ad3-b16e-4429-bbd8-6faab72626fb",
+      "qType": "variable"
+    },
+    "qMetaDef": {},
+    "qName": "vMaxYear",
+    "qNumberPresentation": {
+      "qType": "U",
+      "qnDec": 10,
+      "qUseThou": 0
+    },
+    "qDefinition": "=max(Год)",
+    "tags": []
+  },
+  {
+    "qInfo": {
+      "qId": "23cd4395-5a6f-46d9-8461-71cffb061649",
+      "qType": "variable"
+    },
+    "qMetaDef": {},
+    "qName": "vMeasure",
+    "qNumberPresentation": {
+      "qType": "U",
+      "qnDec": 10,
+      "qUseThou": 0
+    },
+    "tags": []
+  },
+  {
+    "qInfo": {
+      "qId": "48ad9d3a-95a3-4374-86dd-5d6b39c28451",
+      "qType": "variable"
+    },
+    "qMetaDef": {},
+    "qName": "vWY",
+    "qNumberPresentation": {
+      "qType": "U",
+      "qnDec": 10,
+      "qUseThou": 0
+    },
+    "qDefinition": "=' Год = {$(=Max(Год))} '",
+    "tags": []
+  },
+  {
+    "qInfo": {
+      "qId": "5fba0f74-c356-4922-bb3f-97c19cb0d250",
+      "qType": "variable"
+    },
+    "qMetaDef": {},
+    "qName": "vPrevWY",
+    "qNumberPresentation": {
+      "qType": "U",
+      "qnDec": 10,
+      "qUseThou": 0
+    },
+    "qDefinition": "=' Год = {$(=vPrevYear)} '",
+    "tags": []
+  },
+  {
+    "qInfo": {
+      "qId": "625bf241-aa43-4893-9730-f7cf7b2d91f7",
+      "qType": "variable"
+    },
+    "qMetaDef": {},
+    "qName": "vY",
+    "qNumberPresentation": {
+      "qType": "U",
+      "qnDec": 10,
+      "qUseThou": 0
+    },
+    "tags": []
+  },
+  {
+    "qInfo": {
+      "qId": "6dd636bd-511e-41cf-b976-b699aa3e51fb",
+      "qType": "variable"
+    },
+    "qMetaDef": {},
+    "qName": "vPYWeek",
+    "qNumberPresentation": {
+      "qType": "U",
+      "qnDec": 10,
+      "qUseThou": 0
+    },
+    "tags": []
+  },
+  {
+    "qInfo": {
+      "qId": "823e210c-280a-45c9-bd86-d5c55aa0b709",
+      "qType": "variable"
+    },
+    "qMetaDef": {},
+    "qName": "vMeasureType",
+    "qNumberPresentation": {
+      "qType": "U",
+      "qnDec": 10,
+      "qUseThou": 0
+    },
+    "qDefinition": "[Количество продаж]",
+    "tags": []
+  },
+  {
+    "qInfo": {
+      "qId": "9800704e-0231-4dc7-9aa8-3c70130fe977",
+      "qType": "variable"
+    },
+    "qMetaDef": {},
+    "qName": "vPrevYear",
+    "qNumberPresentation": {
+      "qType": "U",
+      "qnDec": 10,
+      "qUseThou": 0
+    },
+    "qDefinition": "=if(Only(Год),  Max(Год)-1,  Max(Год,2))",
+    "tags": []
+  },
+  {
+    "qInfo": {
+      "qId": "98967932-98ce-4b65-be27-98f04b5235c8",
+      "qType": "variable"
+    },
+    "qMetaDef": {},
+    "qName": "vDimensionSeason",
+    "qNumberPresentation": {
+      "qType": "U",
+      "qnDec": 10,
+      "qUseThou": 0
+    },
+    "tags": []
+  },
+  {
+    "qInfo": {
+      "qId": "bff18571-1a5c-48ee-9bcd-795d70261100",
+      "qType": "variable"
+    },
+    "qMetaDef": {},
+    "qName": "vX",
+    "qNumberPresentation": {
+      "qType": "U",
+      "qnDec": 10,
+      "qUseThou": 0
+    },
+    "tags": []
+  },
+  {
+    "qInfo": {
+      "qId": "e360f5b1-edbf-4658-8255-1a948d591a43",
+      "qType": "variable"
+    },
+    "qMetaDef": {},
+    "qName": "vMaxWeek",
+    "qNumberPresentation": {
+      "qType": "U",
+      "qnDec": 10,
+      "qUseThou": 0
+    },
+    "tags": []
+  },
+  {
+    "qInfo": {
+      "qId": "ec32afec-5c46-4d8d-b43d-fc9ae41f7072",
+      "qType": "variable"
+    },
+    "qMetaDef": {},
+    "qName": "vMaxMonday",
+    "qNumberPresentation": {
+      "qType": "U",
+      "qnDec": 10,
+      "qUseThou": 0
+    },
+    "qDefinition": "=max([Дата понедельника])",
+    "tags": []
+  },
+  {
+    "qInfo": {
+      "qId": "ed4f520d-5fbc-4cbd-afaa-f86092056e8e",
+      "qType": "variable"
+    },
+    "qMetaDef": {},
+    "qName": "vGroupDim",
+    "qNumberPresentation": {
+      "qType": "U",
+      "qnDec": 10,
+      "qUseThou": 0
+    },
+    "qDefinition": "Направление",
+    "tags": []
+  }
+]

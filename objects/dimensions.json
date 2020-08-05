@@ -1,0 +1,523 @@
+[
+  {
+    "qInfo": {
+      "qId": "1643aad0-2cf8-4ff2-9b01-54dbd681b996",
+      "qType": "dimension"
+    },
+    "qDim": {
+      "qGrouping": "N",
+      "qFieldDefs": [
+        "Месяц"
+      ],
+      "qFieldLabels": [
+        "Месяц"
+      ],
+      "title": "Месяц",
+      "coloring": {
+        "colorMapRef": "Smaes",
+        "changeHash": "0.44677541731134784"
+      }
+    },
+    "qMetaDef": {
+      "title": "Месяц",
+      "description": "",
+      "tags": []
+    }
+  },
+  {
+    "qInfo": {
+      "qId": "1ea32b07-e923-474a-833d-3acd30136c30",
+      "qType": "dimension"
+    },
+    "qDim": {
+      "qGrouping": "N",
+      "qFieldDefs": [
+        "Группа"
+      ],
+      "qFieldLabels": [
+        "Группа"
+      ],
+      "title": "Группа",
+      "coloring": {
+        "colorMapRef": "Smaes",
+        "changeHash": "0.8850199971738093"
+      }
+    },
+    "qMetaDef": {
+      "title": "Группа",
+      "description": "",
+      "tags": []
+    }
+  },
+  {
+    "qInfo": {
+      "qId": "21e53fe8-011d-4e08-b7be-f8c0456c87ae",
+      "qType": "dimension"
+    },
+    "qDim": {
+      "qGrouping": "H",
+      "qFieldDefs": [
+        "Регион",
+        "Аббр. филиала"
+      ],
+      "qFieldLabels": [],
+      "title": "Регион->Филиал",
+      "coloring": {
+        "colorMapRef": "21e53fe8-011d-4e08-b7be-f8c0456c87ae",
+        "changeHash": "0.7099952854535001"
+      }
+    },
+    "qMetaDef": {
+      "title": "Регион->Филиал",
+      "description": "",
+      "tags": []
+    }
+  },
+  {
+    "qInfo": {
+      "qId": "2a3532e9-4190-4f3f-86b1-c11f242642e9",
+      "qType": "dimension"
+    },
+    "qDim": {
+      "qGrouping": "N",
+      "qFieldDefs": [
+        "Страна происхождения"
+      ],
+      "qFieldLabels": [
+        "Страна происхождения"
+      ],
+      "title": "Страна происхождения",
+      "coloring": {
+        "colorMapRef": "Smaes",
+        "changeHash": "0.5963830630797757"
+      }
+    },
+    "qMetaDef": {
+      "title": "Страна происхождения",
+      "description": "",
+      "tags": []
+    }
+  },
+  {
+    "qInfo": {
+      "qId": "57745049-b152-463d-8cea-8b0780b00450",
+      "qType": "dimension"
+    },
+    "qDim": {
+      "qGrouping": "N",
+      "qFieldDefs": [
+        "Отдел"
+      ],
+      "qFieldLabels": [
+        "Отдел"
+      ],
+      "title": "Отдел",
+      "coloring": {
+        "colorMapRef": "Smaes",
+        "changeHash": "0.4133049998279572"
+      }
+    },
+    "qMetaDef": {
+      "title": "Отдел",
+      "description": "",
+      "tags": []
+    }
+  },
+  {
+    "qInfo": {
+      "qId": "5e7d63c4-4900-4427-b16b-73ffc583f3a9",
+      "qType": "dimension"
+    },
+    "qDim": {
+      "qGrouping": "N",
+      "qFieldDefs": [
+        "Квартал"
+      ],
+      "qFieldLabels": [
+        "Квартал"
+      ],
+      "title": "Квартал",
+      "coloring": {
+        "colorMapRef": "Smaes",
+        "changeHash": "0.019199047523988932"
+      }
+    },
+    "qMetaDef": {
+      "title": "Квартал",
+      "description": "",
+      "tags": []
+    }
+  },
+  {
+    "qInfo": {
+      "qId": "6796ba62-4dde-49b8-82eb-b23635c8af42",
+      "qType": "dimension"
+    },
+    "qDim": {
+      "qGrouping": "N",
+      "qFieldDefs": [
+        "Поставщик импортный"
+      ],
+      "qFieldLabels": [
+        "Поставщик импортный"
+      ],
+      "title": "Поставщик импортный",
+      "coloring": {
+        "colorMapRef": "Smaes",
+        "changeHash": "0.8741586762883689"
+      }
+    },
+    "qMetaDef": {
+      "title": "Поставщик импортный",
+      "description": "",
+      "tags": []
+    }
+  },
+  {
+    "qInfo": {
+      "qId": "82de8a8d-44f7-4bce-b785-aaa86c9ac181",
+      "qType": "dimension"
+    },
+    "qDim": {
+      "qGrouping": "N",
+      "qFieldDefs": [
+        "Филиал"
+      ],
+      "qFieldLabels": [
+        "Филиал"
+      ],
+      "title": "Филиал",
+      "coloring": {
+        "colorMapRef": "Smaes",
+        "changeHash": "0.27224907984049906"
+      }
+    },
+    "qMetaDef": {
+      "title": "Филиал",
+      "description": "",
+      "tags": []
+    }
+  },
+  {
+    "qInfo": {
+      "qId": "889365ec-b79b-46e9-ba19-d4f6a4eec854",
+      "qType": "dimension"
+    },
+    "qDim": {
+      "qGrouping": "N",
+      "qFieldDefs": [
+        "Производитель"
+      ],
+      "qFieldLabels": [
+        "Производитель"
+      ],
+      "title": "Производитель",
+      "coloring": {
+        "colorMapRef": "Smaes",
+        "changeHash": "0.3276536340398579"
+      }
+    },
+    "qMetaDef": {
+      "title": "Производитель",
+      "description": "",
+      "tags": []
+    }
+  },
+  {
+    "qInfo": {
+      "qId": "88c66990-8027-4923-9686-16f8ccdb6020",
+      "qType": "dimension"
+    },
+    "qDim": {
+      "qGrouping": "N",
+      "qFieldDefs": [
+        "Регион"
+      ],
+      "qFieldLabels": [
+        "Регион"
+      ],
+      "title": "Регион",
+      "coloring": {
+        "colorMapRef": "Smaes",
+        "changeHash": "0.6051522433364818"
+      }
+    },
+    "qMetaDef": {
+      "title": "Регион",
+      "description": "",
+      "tags": []
+    }
+  },
+  {
+    "qInfo": {
+      "qId": "8a612757-2cff-4290-b859-e64c1eb5719f",
+      "qType": "dimension"
+    },
+    "qDim": {
+      "qGrouping": "N",
+      "qFieldDefs": [
+        "Город"
+      ],
+      "qFieldLabels": [
+        "Город"
+      ],
+      "title": "Город",
+      "coloring": {
+        "colorMapRef": "Smaes",
+        "changeHash": "0.7459134952524222"
+      }
+    },
+    "qMetaDef": {
+      "title": "Город",
+      "description": "",
+      "tags": []
+    }
+  },
+  {
+    "qInfo": {
+      "qId": "9c59e40f-01a0-43c0-bdcb-929d1ec3ef11",
+      "qType": "dimension"
+    },
+    "qDim": {
+      "qGrouping": "N",
+      "qFieldDefs": [
+        "Неделя"
+      ],
+      "qFieldLabels": [
+        "Неделя"
+      ],
+      "title": "Неделя",
+      "coloring": {
+        "colorMapRef": "Smaes",
+        "changeHash": "0.9719008447159683"
+      }
+    },
+    "qMetaDef": {
+      "title": "Неделя",
+      "description": "",
+      "tags": []
+    }
+  },
+  {
+    "qInfo": {
+      "qId": "BcgzRp",
+      "qType": "dimension"
+    },
+    "qDim": {
+      "qGrouping": "H",
+      "qFieldDefs": [
+        "Город",
+        "Аббр. филиала"
+      ],
+      "qFieldLabels": [],
+      "title": "Город-Филиал",
+      "coloring": {
+        "changeHash": "0.6916516533800301",
+        "colorMapRef": "BcgzRp"
+      }
+    },
+    "qMetaDef": {
+      "title": "Город-Филиал",
+      "description": "",
+      "tags": []
+    }
+  },
+  {
+    "qInfo": {
+      "qId": "Smaes",
+      "qType": "dimension"
+    },
+    "qDim": {
+      "qGrouping": "N",
+      "qFieldDefs": [
+        "Год"
+      ],
+      "qFieldLabels": [
+        "Год"
+      ],
+      "title": "Год",
+      "coloring": {
+        "changeHash": "0.5893486216753734"
+      }
+    },
+    "qMetaDef": {
+      "title": "Год",
+      "description": "",
+      "tags": []
+    }
+  },
+  {
+    "qInfo": {
+      "qId": "a557c9ee-ec90-4eff-ac08-90918b42f091",
+      "qType": "dimension"
+    },
+    "qDim": {
+      "qGrouping": "N",
+      "qFieldDefs": [
+        "Товар"
+      ],
+      "qFieldLabels": [
+        "Товар"
+      ],
+      "title": "Товар",
+      "coloring": {
+        "colorMapRef": "Smaes",
+        "changeHash": "0.1729269156515576"
+      }
+    },
+    "qMetaDef": {
+      "title": "Товар",
+      "description": "",
+      "tags": []
+    }
+  },
+  {
+    "qInfo": {
+      "qId": "e3818edf-986b-4aa1-ae9e-05b08479db69",
+      "qType": "dimension"
+    },
+    "qDim": {
+      "qGrouping": "N",
+      "qFieldDefs": [
+        "Импортный"
+      ],
+      "qFieldLabels": [
+        "Импортный"
+      ],
+      "title": "Импортный",
+      "coloring": {
+        "colorMapRef": "Smaes",
+        "changeHash": "0.6832253870151246"
+      }
+    },
+    "qMetaDef": {
+      "title": "Импортный",
+      "description": "",
+      "tags": []
+    }
+  },
+  {
+    "qInfo": {
+      "qId": "f1cf6dd2-4689-4c13-9386-576fcb7458a4",
+      "qType": "dimension"
+    },
+    "qDim": {
+      "qGrouping": "N",
+      "qFieldDefs": [
+        "Тип продажи"
+      ],
+      "qFieldLabels": [
+        "Тип продажи"
+      ],
+      "title": "Тип продажи",
+      "coloring": {
+        "colorMapRef": "Smaes",
+        "changeHash": "0.5329884583380644"
+      }
+    },
+    "qMetaDef": {
+      "title": "Тип продажи",
+      "description": "",
+      "tags": []
+    }
+  },
+  {
+    "qInfo": {
+      "qId": "f32c1de4-308f-4b5e-8669-61ca349d6699",
+      "qType": "dimension"
+    },
+    "qDim": {
+      "qGrouping": "N",
+      "qFieldDefs": [
+        "Направление"
+      ],
+      "qFieldLabels": [
+        "Направление"
+      ],
+      "title": "Направление",
+      "coloring": {
+        "colorMapRef": "Smaes",
+        "changeHash": "0.872640835721983"
+      }
+    },
+    "qMetaDef": {
+      "title": "Направление",
+      "description": "",
+      "tags": []
+    }
+  },
+  {
+    "qInfo": {
+      "qId": "f7dcd532-b9b3-4ce7-9613-f2da34eb554e",
+      "qType": "dimension"
+    },
+    "qDim": {
+      "qGrouping": "N",
+      "qFieldDefs": [
+        "Поставщик"
+      ],
+      "qFieldLabels": [
+        "Поставщик"
+      ],
+      "title": "Поставщик",
+      "coloring": {
+        "colorMapRef": "Smaes",
+        "changeHash": "0.2722674218037875"
+      }
+    },
+    "qMetaDef": {
+      "title": "Поставщик",
+      "description": "",
+      "tags": []
+    }
+  },
+  {
+    "qInfo": {
+      "qId": "f9d63e2c-deaf-48ec-b102-9f53dd689955",
+      "qType": "dimension"
+    },
+    "qDim": {
+      "qGrouping": "N",
+      "qFieldDefs": [
+        "Подгруппа"
+      ],
+      "qFieldLabels": [
+        "Подгруппа"
+      ],
+      "title": "Подгруппа",
+      "coloring": {
+        "colorMapRef": "Smaes",
+        "changeHash": "0.9274589155689268"
+      }
+    },
+    "qMetaDef": {
+      "title": "Подгруппа",
+      "description": "",
+      "tags": []
+    }
+  },
+  {
+    "qInfo": {
+      "qId": "nmxEC",
+      "qType": "dimension"
+    },
+    "qDim": {
+      "qGrouping": "N",
+      "qFieldDefs": [
+        "Аббр. филиала"
+      ],
+      "qFieldLabels": [
+        "Аббр. филиала"
+      ],
+      "title": "Аббр. филиала",
+      "coloring": {
+        "changeHash": "0.8348521969356322"
+      }
+    },
+    "qMetaDef": {
+      "title": "Аббр. филиала",
+      "description": "",
+      "tags": []
+    }
+  }
+]

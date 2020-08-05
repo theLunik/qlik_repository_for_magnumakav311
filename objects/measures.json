@@ -1,0 +1,634 @@
+[
+  {
+    "qInfo": {
+      "qId": "055b4a90-6a7f-457e-b2e9-6f9a253b3362",
+      "qType": "measure"
+    },
+    "qMeasure": {
+      "qLabel": "LFL Total Кол-во продаж",
+      "qDef": "Sum({<$(=vWY)>}  [Количество продаж])/Sum({<$(=vPrevWY)>} [Количество продаж]) -1",
+      "qGrouping": "N",
+      "qExpressions": [],
+      "qActiveExpression": 0,
+      "coloring": {
+        "baseColor": {
+          "color": "#85728e",
+          "index": -1
+        }
+      }
+    },
+    "qMetaDef": {
+      "title": "LFL Total Кол-во продаж",
+      "description": "",
+      "tags": []
+    }
+  },
+  {
+    "qInfo": {
+      "qId": "0c9ea579-cebf-48f1-b026-29bdd2c10286",
+      "qType": "measure"
+    },
+    "qMeasure": {
+      "qLabel": "LFL TOTAL",
+      "qDef": "Sum({<$(=vWY)>} [Сумма продаж по ПЦ с НДС])/Sum({<$(=vPrevWY)>} [Сумма продаж по ПЦ с НДС]) -1",
+      "qGrouping": "N",
+      "qExpressions": [],
+      "qActiveExpression": 0,
+      "coloring": {
+        "baseColor": {
+          "color": "#7b7a78",
+          "index": 13
+        }
+      }
+    },
+    "qMetaDef": {
+      "title": "LFL TOTAL",
+      "description": "LFL  для  Сумма продаж по ПЦ с НДС\nс неделей прошлого года по всем филиалам",
+      "tags": []
+    }
+  },
+  {
+    "qInfo": {
+      "qId": "3840c08a-67e6-4a70-9683-feea31fb3c5e",
+      "qType": "measure"
+    },
+    "qMeasure": {
+      "qLabel": "Списание (возмещение) без НДС",
+      "qDef": "Sum({<$(=vWY)>} bTemplate721 *[Сумма списания без НДС])/Sum({<$(=vWY)>} [Сумма продаж по ПЦ без НДС])\r\n\n//bTemplate310_721*",
+      "qGrouping": "N",
+      "qExpressions": [],
+      "qActiveExpression": 0,
+      "coloring": {
+        "baseColor": {
+          "color": "#e06ab8",
+          "index": -1
+        }
+      }
+    },
+    "qMetaDef": {
+      "title": "Списание (возмещение) без НДС",
+      "description": "",
+      "tags": []
+    }
+  },
+  {
+    "qInfo": {
+      "qId": "3a4fc7c6-3e17-47af-a12c-b5dc2acc62dd",
+      "qType": "measure"
+    },
+    "qMeasure": {
+      "qLabel": "Сумма прихода",
+      "qDef": "Sum({<$(=vWY)>} [Сумма прихода])",
+      "qGrouping": "N",
+      "qExpressions": [],
+      "qActiveExpression": 0,
+      "coloring": {
+        "baseColor": {
+          "color": "#7b7a78",
+          "index": 13
+        }
+      }
+    },
+    "qMetaDef": {
+      "title": "Сумма прихода",
+      "description": "",
+      "tags": []
+    }
+  },
+  {
+    "qInfo": {
+      "qId": "4f28a0a3-c401-4ea2-af1c-62c07eb6a82d",
+      "qType": "measure"
+    },
+    "qMeasure": {
+      "qLabel": "SL %",
+      "qDef": "Sum({<$(=vWY)>} bDeliverInTime*[Сумма прихода])/\r\nSum({<$(=vWY)>} -1*(bDeliverLater-1)*[Сумма заказа])\n\n//Sum({<$(=vWY)>} [Сумма прихода])/Sum({<$(=vWY)>} [Сумма заказа])",
+      "qGrouping": "N",
+      "qExpressions": [],
+      "qActiveExpression": 0,
+      "coloring": {
+        "baseColor": {
+          "color": "#c93d7a",
+          "index": -1
+        }
+      }
+    },
+    "qMetaDef": {
+      "title": "SL %",
+      "description": "",
+      "tags": []
+    }
+  },
+  {
+    "qInfo": {
+      "qId": "676118f2-8937-4c4c-9185-34bfaa0d2aca",
+      "qType": "measure"
+    },
+    "qMeasure": {
+      "qLabel": "LFL нед. (накопление)",
+      "qDef": "If(Sum({<$(=vWY)>} bLFLWeek*[Сумма продаж по ПЦ с НДС]) > 0,\r\n   Aggr(RangeSum(Above(TOTAL Sum({<$(=vWY)>} bLFLWeek*[Сумма продаж по ПЦ с НДС]), 0, RowNo())), Регион, Город, [Филиал], (Неделя, (NUMERIC))))\n /\nIf(Sum({<$(=vPrevWY)>} [Сумма продаж по ПЦ с НДС]) > 0,\n   Aggr(RangeSum(Above(TOTAL Sum({<$(=vPrevWY)>} [Сумма продаж по ПЦ с НДС]), 0, RowNo())), Регион, Город, [Филиал], (Неделя, (NUMERIC))))\n -if(Sum({<$(=vWY)>} bLFLWeek)>0 ,1) \n\n//if('$(vMaxMonday)'>= AddYears([Дата открытия],1), Sum({<$(=vWY)>} [Сумма продаж по ПЦ с НДС]))/\n//if('$(vMaxMonday)'>= AddYears([Дата открытия],1), Sum({<$(=vPrevWY)>} [Сумма продаж по ПЦ с НДС]))-1\n\n\n//sum(aggr(if([Дата понедельника]>= AddYears([Дата открытия],1), Sum({<$(=vWY)>} [Сумма продаж по ПЦ с НДС])) , [Неделя-Год], [Код компании]))\n///sum(aggr(if([Дата понедельника]>= AddYears([Дата открытия],1), Sum({<$(=vPrevWY)>} [Сумма продаж по ПЦ с НДС])) , [Неделя-Год], [Код компании]))-1\n\n\n//sum(aggr(if([Неделя]> week([Дата открытия]), Sum({<$(=vWY)>} [Сумма продаж по ПЦ с НДС])) , [Неделя], [Код компании]))\n///sum(aggr(if([Неделя]> week([Дата открытия]), Sum({<$(=vPrevWY)>} [Сумма продаж по ПЦ с НДС])) , [Неделя], [Код компании]))-1",
+      "qGrouping": "N",
+      "qExpressions": [],
+      "qActiveExpression": 0,
+      "coloring": {
+        "baseColor": {
+          "color": "#545352",
+          "index": 14
+        },
+        "gradient": {
+          "colors": [
+            {
+              "color": "#ba1c60",
+              "index": -1
+            },
+            {
+              "color": "#7b7a78",
+              "index": 13
+            }
+          ],
+          "breakTypes": [
+            false
+          ],
+          "limits": [
+            0
+          ],
+          "limitType": "percent"
+        }
+      }
+    },
+    "qMetaDef": {
+      "title": "LFL нед. (накопление)",
+      "description": "LFL  для  Сумма продаж по ПЦ с НДС с неделей прошлого года с  накоплением в диаграммах",
+      "tags": []
+    }
+  },
+  {
+    "qInfo": {
+      "qId": "7c6a25a3-2af9-44a7-bba9-e81b64a5745a",
+      "qType": "measure"
+    },
+    "qMeasure": {
+      "qLabel": "Списание (брак, порча, потери) без НДС",
+      "qDef": "Sum({<$(=vWY)>} bTemplate310*[Сумма списания без НДС])/Sum({<$(=vWY)>} [Сумма продаж по ПЦ без НДС])\r\n\n//bTemplate310_721*",
+      "qGrouping": "N",
+      "qExpressions": [],
+      "qActiveExpression": 0,
+      "coloring": {
+        "baseColor": {
+          "color": "#E01250",
+          "index": -1
+        }
+      }
+    },
+    "qMetaDef": {
+      "title": "Списание (брак, порча, потери) без НДС",
+      "description": "",
+      "tags": []
+    }
+  },
+  {
+    "qInfo": {
+      "qId": "99767ef3-cc78-4896-bc0b-4de36f7b23f4",
+      "qType": "measure"
+    },
+    "qMeasure": {
+      "qLabel": "Сумма заказа",
+      "qDef": "Sum({<$(=vWY)>} [Сумма заказа])",
+      "qGrouping": "N",
+      "qExpressions": [],
+      "qActiveExpression": 0,
+      "coloring": {
+        "baseColor": {
+          "color": "#b6d7ea",
+          "index": 4
+        }
+      }
+    },
+    "qMetaDef": {
+      "title": "Сумма заказа",
+      "description": "",
+      "tags": []
+    }
+  },
+  {
+    "qInfo": {
+      "qId": "9f0c01ed-03ee-45e6-9806-bc8ebd480bd7",
+      "qType": "measure"
+    },
+    "qMeasure": {
+      "qLabel": "LFL TOTAL (накопление)",
+      "qDef": "If(Sum({<$(=vWY)>} [Сумма продаж по ПЦ с НДС]) > 0,\r\n   Aggr(RangeSum(Above(TOTAL Sum({<$(=vWY)>} [Сумма продаж по ПЦ с НДС]), 0, RowNo())), Регион, Город, [Филиал], (Неделя, (NUMERIC))))\n /\nIf(Sum({<$(=vPrevWY)>} [Сумма продаж по ПЦ с НДС]) > 0,\n   Aggr(RangeSum(Above(TOTAL Sum({<$(=vPrevWY)>} [Сумма продаж по ПЦ с НДС]), 0, RowNo())), Регион, Город, [Филиал], (Неделя, (NUMERIC))))\n -1\n\n\n\n\n\n\n\n\n//Sum({<$(=vWY)>} [Сумма продаж по ПЦ с НДС])/Sum({<$(=vPrevWY)>} [Сумма продаж по ПЦ с НДС]) -1",
+      "qGrouping": "N",
+      "qExpressions": [],
+      "qActiveExpression": 0,
+      "coloring": {
+        "baseColor": {
+          "color": "#545352",
+          "index": 14
+        }
+      }
+    },
+    "qMetaDef": {
+      "title": "LFL TOTAL (накопление)",
+      "description": "LFL  для  Сумма продаж по ПЦ с НДС с неделей прошлого года по всем филиалам  с накоплением",
+      "tags": []
+    }
+  },
+  {
+    "qInfo": {
+      "qId": "JYwPBxM",
+      "qType": "measure"
+    },
+    "qMeasure": {
+      "qLabel": "СОФ пр. год",
+      "qDef": "Sum({<$(=vPrevWY), [Отдел] = {'F15 ОВОЩИ, ФРУКТЫ, ЯГОДЫ, ГРИБЫ'} >} [Сумма продаж по ПЦ с НДС])/Sum({<$(=vPrevWY)>} [Сумма продаж по ПЦ с НДС])",
+      "qGrouping": "N",
+      "qExpressions": [],
+      "qActiveExpression": 0,
+      "qLabelExpression": "='СОФ ' & vPrevYear",
+      "coloring": {
+        "baseColor": {
+          "color": "#a0eea1",
+          "index": -1
+        }
+      }
+    },
+    "qMetaDef": {
+      "title": "СОФ пр. год",
+      "description": "",
+      "tags": []
+    }
+  },
+  {
+    "qInfo": {
+      "qId": "KJSRByq",
+      "qType": "measure"
+    },
+    "qMeasure": {
+      "qLabel": "LFL нед.",
+      "qDef": "Sum({<$(=vWY)>} bLFLWeek*[Сумма продаж по ПЦ с НДС])/\r\nSum({<$(=vPrevWY)>} [Сумма продаж по ПЦ с НДС])\n-if(Sum({<$(=vWY)>} bLFLWeek)>0 ,1)\n\n\n//if('$(vMaxMonday)'>= AddYears([Дата открытия],1), Sum({<$(=vWY)>} [Сумма продаж по ПЦ с НДС]))/\n//if('$(vMaxMonday)'>= AddYears([Дата открытия],1), Sum({<$(=vPrevWY)>} [Сумма продаж по ПЦ с НДС]))-1\n\n\n//sum(aggr(if([Дата понедельника]>= AddYears([Дата открытия],1), Sum({<$(=vWY)>} [Сумма продаж по ПЦ с НДС])) , [Неделя-Год], [Код компании]))\n///sum(aggr(if([Дата понедельника]>= AddYears([Дата открытия],1), Sum({<$(=vPrevWY)>} [Сумма продаж по ПЦ с НДС])) , [Неделя-Год], [Код компании]))-1\n\n\n//sum(aggr(if([Неделя]> week([Дата открытия]), Sum({<$(=vWY)>} [Сумма продаж по ПЦ с НДС])) , [Неделя], [Код компании]))\n///sum(aggr(if([Неделя]> week([Дата открытия]), Sum({<$(=vPrevWY)>} [Сумма продаж по ПЦ с НДС])) , [Неделя], [Код компании]))-1",
+      "qGrouping": "N",
+      "qExpressions": [],
+      "qActiveExpression": 0,
+      "coloring": {
+        "baseColor": {
+          "color": "#7b7a78",
+          "index": 13
+        },
+        "gradient": {
+          "colors": [
+            {
+              "color": "#ba1c60",
+              "index": -1
+            },
+            {
+              "color": "#7b7a78",
+              "index": 13
+            }
+          ],
+          "breakTypes": [
+            false
+          ],
+          "limits": [
+            0
+          ],
+          "limitType": "percent"
+        }
+      }
+    },
+    "qMetaDef": {
+      "title": "LFL нед.",
+      "description": "LFL  для  Сумма продаж по ПЦ с НДС\nс неделей прошлого года",
+      "tags": []
+    }
+  },
+  {
+    "qInfo": {
+      "qId": "PsjBhS",
+      "qType": "measure"
+    },
+    "qMeasure": {
+      "qLabel": "СОФ тек. год",
+      "qDef": "Sum({<$(=vWY), [Отдел] = {'F15 ОВОЩИ, ФРУКТЫ, ЯГОДЫ, ГРИБЫ'} >} [Сумма продаж по ПЦ с НДС])/Sum({<$(=vWY)>} [Сумма продаж по ПЦ с НДС])",
+      "qGrouping": "N",
+      "qExpressions": [],
+      "qActiveExpression": 0,
+      "qLabelExpression": "='СОФ ' & vMaxYear",
+      "coloring": {
+        "baseColor": {
+          "color": "#43c638",
+          "index": -1
+        }
+      }
+    },
+    "qMetaDef": {
+      "title": "СОФ тек. год",
+      "description": "",
+      "tags": []
+    }
+  },
+  {
+    "qInfo": {
+      "qId": "SKhvFQ",
+      "qType": "measure"
+    },
+    "qMeasure": {
+      "qLabel": "NF тек. год",
+      "qDef": "Sum({<$(=vWY), [Направление] = {'NonFood'} >} [Сумма продаж по ПЦ с НДС])/Sum({<$(=vWY)>} [Сумма продаж по ПЦ с НДС])",
+      "qGrouping": "N",
+      "qExpressions": [],
+      "qActiveExpression": 0,
+      "qLabelExpression": "='NF ' & vMaxYear",
+      "coloring": {
+        "baseColor": {
+          "color": "#795faa",
+          "index": -1
+        }
+      }
+    },
+    "qMetaDef": {
+      "title": "NF тек. год",
+      "description": "",
+      "tags": []
+    }
+  },
+  {
+    "qInfo": {
+      "qId": "Yjzuf",
+      "qType": "measure"
+    },
+    "qMeasure": {
+      "qLabel": "Выполнение плана %",
+      "qDef": "Sum({<$(=vWY)>} [Сумма продаж по ПЦ с НДС])/Sum({<$(=vWY)>} [План.Сумма продаж с НДС])",
+      "qGrouping": "N",
+      "qExpressions": [],
+      "qActiveExpression": 0,
+      "coloring": {
+        "baseColor": {
+          "color": "#63d5ac",
+          "index": -1
+        }
+      }
+    },
+    "qMetaDef": {
+      "title": "Выполнение плана %",
+      "description": "",
+      "tags": []
+    }
+  },
+  {
+    "qInfo": {
+      "qId": "a347872d-d2be-449c-9cad-c5723d5ce7c4",
+      "qType": "measure"
+    },
+    "qMeasure": {
+      "qLabel": "Списание (брак, порча, потери) с НДС",
+      "qDef": "Sum({<$(=vWY)>} bTemplate310*[Сумма списания с НДС])/Sum({<$(=vWY)>} [Сумма продаж по ПЦ с НДС])\r\n\n//bTemplate310_721*",
+      "qGrouping": "N",
+      "qExpressions": [],
+      "qActiveExpression": 0,
+      "coloring": {
+        "baseColor": {
+          "color": "#E01250",
+          "index": -1
+        }
+      }
+    },
+    "qMetaDef": {
+      "title": "Списание (брак, порча, потери) с НДС",
+      "description": "",
+      "tags": []
+    }
+  },
+  {
+    "qInfo": {
+      "qId": "a82b417f-b1ca-45ef-90f7-923a8d50084c",
+      "qType": "measure"
+    },
+    "qMeasure": {
+      "qLabel": "Списание (возмещение) с НДС",
+      "qDef": "Sum({<$(=vWY)>} bTemplate721 *[Сумма списания с НДС])/Sum({<$(=vWY)>} [Сумма продаж по ПЦ с НДС])\n\n//bTemplate310_721*",
+      "qGrouping": "N",
+      "qExpressions": [],
+      "qActiveExpression": 0,
+      "coloring": {
+        "baseColor": {
+          "color": "#e06ab8",
+          "index": -1
+        }
+      }
+    },
+    "qMetaDef": {
+      "title": "Списание (возмещение) с НДС",
+      "description": "",
+      "tags": []
+    }
+  },
+  {
+    "qInfo": {
+      "qId": "b0cc7631-a39a-44b8-b2cf-413a6d251672",
+      "qType": "measure"
+    },
+    "qMeasure": {
+      "qLabel": "Количество продаж",
+      "qDef": "Sum({<$(=vWY)>} [Количество продаж])",
+      "qGrouping": "N",
+      "qExpressions": [],
+      "qActiveExpression": 0,
+      "coloring": {
+        "baseColor": {
+          "color": "#644989",
+          "index": -1
+        }
+      }
+    },
+    "qMetaDef": {
+      "title": "Количество продаж",
+      "description": "",
+      "tags": []
+    }
+  },
+  {
+    "qInfo": {
+      "qId": "c74c1f9e-42c0-4ab8-b1e5-04a89846de65",
+      "qType": "measure"
+    },
+    "qMeasure": {
+      "qLabel": "План продаж  с НДС",
+      "qDef": "Sum({<$(=vWY)>} [План.Сумма продаж с НДС])",
+      "qGrouping": "N",
+      "qExpressions": [],
+      "qActiveExpression": 0,
+      "coloring": {
+        "baseColor": {
+          "color": "#276e27",
+          "index": 3
+        }
+      }
+    },
+    "qMetaDef": {
+      "title": "План продаж  с НДС",
+      "description": "",
+      "tags": []
+    }
+  },
+  {
+    "qInfo": {
+      "qId": "cmLRPX",
+      "qType": "measure"
+    },
+    "qMeasure": {
+      "qLabel": "Продажи с НДС",
+      "qDef": "Sum({<$(=vWY)>} [Сумма продаж по ПЦ с НДС])",
+      "qGrouping": "N",
+      "qExpressions": [],
+      "qActiveExpression": 0,
+      "coloring": {
+        "baseColor": {
+          "color": "#276e27",
+          "index": 3
+        }
+      }
+    },
+    "qMetaDef": {
+      "title": "Продажи с НДС",
+      "description": "",
+      "tags": []
+    }
+  },
+  {
+    "qInfo": {
+      "qId": "eEpsrCN",
+      "qType": "measure"
+    },
+    "qMeasure": {
+      "qLabel": "Количество прихода",
+      "qDef": "Sum({<$(vWY)>} [Количество прихода])",
+      "qGrouping": "N",
+      "qExpressions": [],
+      "qActiveExpression": 0,
+      "coloring": {}
+    },
+    "qMetaDef": {
+      "title": "Количество прихода",
+      "description": "",
+      "tags": []
+    }
+  },
+  {
+    "qInfo": {
+      "qId": "f13a54aa-c5ab-4818-b63c-082b720763d4",
+      "qType": "measure"
+    },
+    "qMeasure": {
+      "qLabel": "LFL мес.",
+      "qDef": "Sum({<$(=vWY)>} bLFLMonth*[Сумма продаж по ПЦ с НДС])/\r\nSum({<$(=vPrevWY)>} [Сумма продаж по ПЦ с НДС])\n-if(Sum({<$(=vWY)>} bLFLMonth)>0 ,1)\n\n\n//sum(aggr(if(MonthStart([Дата понедельника])>= AddYears([Дата открытия],1), Sum({<$(=vWY)>} [Сумма продаж по ПЦ с НДС])) , [Неделя-Год], [Код компании]))\n///sum(aggr(if(MonthStart([Дата понедельника])>= AddYears([Дата открытия],1), Sum({<$(=vPrevWY)>} [Сумма продаж по ПЦ с НДС])) , [Неделя-Год], [Код компании]))-1\n\n\n",
+      "qGrouping": "N",
+      "qExpressions": [],
+      "qActiveExpression": 0,
+      "coloring": {
+        "baseColor": {
+          "color": "#545352",
+          "index": 14
+        }
+      }
+    },
+    "qMetaDef": {
+      "title": "LFL мес.",
+      "description": "LFL  для  Сумма продаж по ПЦ с НДС\nс неделей прошлого года",
+      "tags": []
+    }
+  },
+  {
+    "qInfo": {
+      "qId": "nZdrR",
+      "qType": "measure"
+    },
+    "qMeasure": {
+      "qLabel": "Промо (с НДС)",
+      "qDef": "Sum({<$(=vWY) >} [Сумма продаж по ПЦ рознично-акционная с НДС])/Sum({<$(=vWY)>} [Сумма продаж по ПЦ с НДС])",
+      "qGrouping": "N",
+      "qExpressions": [],
+      "qActiveExpression": 0,
+      "coloring": {
+        "baseColor": {
+          "color": "#ffcf02",
+          "index": 8
+        }
+      }
+    },
+    "qMetaDef": {
+      "title": "Промо (с НДС)",
+      "description": "",
+      "tags": []
+    }
+  },
+  {
+    "qInfo": {
+      "qId": "phmAh",
+      "qType": "measure"
+    },
+    "qMeasure": {
+      "qLabel": "Количество заказа",
+      "qDef": "Sum({<$(vWY)>} [Количество заказа])",
+      "qGrouping": "N",
+      "qExpressions": [],
+      "qActiveExpression": 0,
+      "coloring": {}
+    },
+    "qMetaDef": {
+      "title": "Количество заказа",
+      "description": "",
+      "tags": []
+    }
+  },
+  {
+    "qInfo": {
+      "qId": "ttJxr",
+      "qType": "measure"
+    },
+    "qMeasure": {
+      "qLabel": "Списание",
+      "qDef": "Sum({<$(=vWY)>} bTemplate310_721*[Сумма списания без НДС])/Sum({<$(=vWY)>} [Сумма продаж по ПЦ без НДС])\r\n\n//bTemplate310_721*",
+      "qGrouping": "N",
+      "qExpressions": [],
+      "qActiveExpression": 0,
+      "coloring": {
+        "baseColor": {
+          "color": "#E01250",
+          "index": -1
+        }
+      }
+    },
+    "qMetaDef": {
+      "title": "Списание",
+      "description": "",
+      "tags": []
+    }
+  },
+  {
+    "qInfo": {
+      "qId": "wMWVSv",
+      "qType": "measure"
+    },
+    "qMeasure": {
+      "qLabel": "NF пр. год",
+      "qDef": "Sum({<$(=vPrevWY), [Направление] = {'NonFood'} >} [Сумма продаж по ПЦ с НДС])/Sum({<$(=vPrevWY)>} [Сумма продаж по ПЦ с НДС])",
+      "qGrouping": "N",
+      "qExpressions": [],
+      "qActiveExpression": 0,
+      "qLabelExpression": "='NF ' & vPrevYear",
+      "coloring": {
+        "baseColor": {
+          "color": "#c0c5f1",
+          "index": -1
+        }
+      }
+    },
+    "qMetaDef": {
+      "title": "NF пр. год",
+      "description": "",
+      "tags": []
+    }
+  }
+]

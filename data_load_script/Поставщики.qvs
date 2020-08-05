@@ -1,0 +1,9 @@
+///$tab Поставщики
+Поставщики:
+LOAD
+    "Код поставщика",
+    Поставщик,
+    "Поставщик импортный",
+    url_web
+FROM [lib://Data/Magnum/Поставщик/Поставщик.qvd]//[lib://QlikViewProjects/02 QVDB/01 Dictionaries/Поставщик/Поставщик.qvd]
+(qvd);

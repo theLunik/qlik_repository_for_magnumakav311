@@ -1,0 +1,48 @@
+[
+  {
+    "qInfo": {
+      "qId": "1015ff2d-dd90-4a24-987c-4a9c81b18a41",
+      "qType": "bookmark"
+    },
+    "qMetaDef": {
+      "title": "Неделя 15",
+      "description": ""
+    },
+    "creationDate": "2020-05-26T17:44:43.401Z",
+    "sheetId": "752b1266-a591-4dde-bf8a-4f9d2dfcc0c7",
+    "selectionFields": "Неделя",
+    "qData": {
+      "qBookMark": {
+        "qStateData": [
+          {
+            "qStateName": "$",
+            "qFieldItems": [
+              {
+                "qDef": {
+                  "qName": "Неделя",
+                  "qType": "PRESENT"
+                },
+                "qSelectInfo": {
+                  "qRangeLo": "NaN",
+                  "qRangeHi": "NaN",
+                  "qNumberFormat": {
+                    "qType": "U",
+                    "qnDec": 10,
+                    "qUseThou": 0
+                  },
+                  "qRangeInfo": [],
+                  "qContinuousRangeInfo": []
+                },
+                "qValues": [],
+                "qExcludedValues": []
+              }
+            ]
+          }
+        ],
+        "qUtcModifyTime": 43977.989386574074,
+        "qVariableItems": [],
+        "qPatches": []
+      }
+    }
+  }
+]

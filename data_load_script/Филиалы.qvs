@@ -1,0 +1,79 @@
+///$tab Филиалы
+left join(Филиалы_tmp)
+Форматы:
+LOAD
+    "Код площадки",
+    Формат
+FROM  [lib://Data/Magnum/Форматы/Форматы.qvd]//[lib://QlikViewProjects/02 QVDB/01 Dictionaries/Форматы/Форматы.qvd]
+(qvd);
+
+left join(Филиалы_tmp)
+Регионы:
+LOAD
+    //№,
+    Филиал as "Аббр. филиала",
+    //Формат,
+    Город,
+    date("Начало работы",'DD.MM.YYYY') as "Дата открытия",
+    //Наименование_1С,
+    //SPRUT,
+    //QV,
+    Регион_ОД as Регион
+FROM [lib://Data/Magnum/QS Data/File Data/ТК_группировка.xlsx]//[lib://File Data/ТК_группировка.xlsx]
+(ooxml, embedded labels, table is ТК_инф);
+
+left join(Филиалы_tmp)
+Координаты:
+LOAD
+	Distinct
+    "Код компании",
+    Широта,
+    Долгота
+FROM [lib://Data/Magnum/QS Data/File Data/Координаты торговых залов.xlsx]
+(ooxml, embedded labels, table is Sheet1)
+where not IsNull(Широта);
+
+
+
+Филиалы:
+Load
+	distinct
+	"Код компании",
+    Филиал,
+    "Аббр. филиала",
+    "Дата открытия",
+    Формат,
+    Город,
+    Регион,
+    GeoMakePoint([Широта],[Долгота]) as [Координаты_филиала],
+    Широта,
+    Долгота
+Resident Филиалы_tmp;
+
+    
+TAG FIELD [Филиал] WITH '$geoname', '$relates_Координаты_филиала';
+TAG FIELD [Координаты_филиала] WITH '$geopoint', '$relates_Филиал';
+
+drop table Филиалы_tmp;
+
+Map_OpenDate:
+Mapping Load
+	distinct
+	"Код компании",
+    "Дата открытия" as "OpenDate"
+Resident Филиалы
+where "Дата открытия">'';
+
+Факты:
+NoConcatenate
+load *,
+     if([Дата понедельника]>=AddYears(OpenDate,1), 1, 0) as bLFLWeek,
+     if(bDeliverLater=1, 0,1) as bDeliverNotLater,   
+     if(MonthStart([Дата понедельника])>=AddYears(OpenDate,1), 1, 0) as bLFLMonth;
+load *,
+	 if([Неделя-Год] = [Неделя-Год прихода], 1,0) as bDeliverInTime,
+     if(makeweekdate([Год прихода], [Неделя прихода]) > [Дата понедельника] or IsNull([Год прихода]), 1,0) as bDeliverLater,    
+ 	 ApplyMap('Map_OpenDate', [Код компании], Today()) as OpenDate
+resident [Таблица фактов];
+
+drop Table [Таблица фактов];

@@ -1,0 +1,349 @@
+[
+  {
+    "qInfo": {
+      "qId": "451799b6-4199-40fb-bd9d-2724cd5255f6",
+      "qType": "snapshot"
+    },
+    "qMetaDef": {
+      "title": "",
+      "description": "",
+      "annotation": ""
+    },
+    "creationDate": "2020-05-26T09:24:34.883Z",
+    "snapshotData": {
+      "object": {
+        "size": {
+          "w": 118,
+          "h": 42
+        }
+      },
+      "rtl": false,
+      "parent": {
+        "h": 674.4,
+        "w": 1536
+      }
+    },
+    "qMeta": {
+      "privileges": [
+        "read",
+        "update",
+        "delete",
+        "exportdata"
+      ]
+    },
+    "qSelectionInfo": {},
+    "qHyperCube": {
+      "qSize": {
+        "qcx": 1,
+        "qcy": 1
+      },
+      "qDimensionInfo": [
+        {
+          "qFallbackTitle": "Признак акционности",
+          "qApprMaxGlyphCount": 1,
+          "qCardinal": 1,
+          "qSortIndicator": "A",
+          "qGroupFallbackTitles": [
+            "Признак акционности"
+          ],
+          "qGroupPos": 0,
+          "qStateCounts": {
+            "qLocked": 0,
+            "qSelected": 0,
+            "qOption": 1,
+            "qDeselected": 0,
+            "qAlternative": 0,
+            "qExcluded": 0,
+            "qSelectedExcluded": 0,
+            "qLockedExcluded": 0
+          },
+          "qTags": [
+            "$numeric",
+            "$integer"
+          ],
+          "qDimensionType": "N",
+          "qGrouping": "N",
+          "qNumFormat": {
+            "qType": "U",
+            "qnDec": 0,
+            "qUseThou": 0
+          },
+          "qIsAutoFormat": true,
+          "qGroupFieldDefs": [
+            "Признак акционности"
+          ],
+          "qMin": 1,
+          "qMax": 1,
+          "qContinuousAxes": true,
+          "qAttrExprInfo": [],
+          "qAttrDimInfo": [],
+          "qCardinalities": {
+            "qCardinal": 1,
+            "qHypercubeCardinal": 0,
+            "qAllValuesCardinal": -1
+          },
+          "autoSort": true,
+          "cId": "sQVcNjv",
+          "othersLabel": "Другие",
+          "textAlign": {
+            "auto": true,
+            "align": "left"
+          },
+          "representation": {
+            "type": "text",
+            "urlPosition": "dimension",
+            "urlLabel": "",
+            "linkUrl": ""
+          }
+        }
+      ],
+      "qMeasureInfo": [],
+      "qEffectiveInterColumnSortOrder": [
+        0
+      ],
+      "qGrandTotalRow": [],
+      "qDataPages": [
+        {
+          "qMatrix": [],
+          "qTails": [],
+          "qArea": {
+            "qLeft": 0,
+            "qTop": 1,
+            "qWidth": 1,
+            "qHeight": 0
+          }
+        }
+      ],
+      "qPivotDataPages": [],
+      "qStackedDataPages": [],
+      "qMode": "S",
+      "qNoOfLeftDims": -1,
+      "qTreeNodesOnDim": [],
+      "qColumnOrder": [
+        0
+      ],
+      "columnOrder": [
+        0
+      ],
+      "columnWidths": [
+        -1
+      ]
+    },
+    "search": {
+      "sorting": "auto"
+    },
+    "showTitles": true,
+    "title": "",
+    "subtitle": "",
+    "footnote": "",
+    "showDetails": false,
+    "components": [],
+    "totals": {
+      "show": true,
+      "position": "noTotals",
+      "label": "Итоги"
+    },
+    "scrolling": {
+      "horizontal": true,
+      "keepFirstColumnInView": false,
+      "keepFirstColumnInViewTouch": false
+    },
+    "multiline": {
+      "wrapTextInHeaders": true,
+      "wrapTextInCells": true
+    },
+    "visualization": "table",
+    "isRecommended": true,
+    "recommendation": {
+      "analysis": {
+        "analysis": "list",
+        "dims": [
+          {
+            "field": "Признак акционности",
+            "expr": "Признак акционности",
+            "cType": "eField"
+          }
+        ],
+        "msrs": []
+      }
+    },
+    "visualizationType": "auto-chart",
+    "sourceObjectId": "gjQuLq",
+    "sheetId": "752b1266-a591-4dde-bf8a-4f9d2dfcc0c7",
+    "timestamp": 1590485074879,
+    "isClone": false,
+    "supportExport": true
+  },
+  {
+    "qInfo": {
+      "qId": "90c4d596-79be-46ac-96cd-9a0b40a46395",
+      "qType": "snapshot"
+    },
+    "qMetaDef": {
+      "title": "LFL нед.",
+      "description": "",
+      "annotation": ""
+    },
+    "creationDate": "2020-06-03T22:08:39.502Z",
+    "qMeta": {
+      "privileges": [
+        "read",
+        "update",
+        "delete",
+        "exportdata"
+      ]
+    },
+    "qSelectionInfo": {},
+    "qHyperCube": {
+      "qSize": {
+        "qcx": 1,
+        "qcy": 1
+      },
+      "qDimensionInfo": [],
+      "qMeasureInfo": [
+        {
+          "qFallbackTitle": "LFL нед.",
+          "qApprMaxGlyphCount": 1,
+          "qCardinal": 0,
+          "qSortIndicator": "D",
+          "qNumFormat": {
+            "qType": "F",
+            "qnDec": 2,
+            "qUseThou": 0,
+            "qFmt": "0,0%",
+            "qDec": ",",
+            "qThou": " "
+          },
+          "qMin": "NaN",
+          "qMax": "NaN",
+          "qAttrExprInfo": [],
+          "qAttrDimInfo": [],
+          "qLibraryId": "KJSRByq",
+          "qTrendLines": [],
+          "coloring": {
+            "baseColor": {
+              "color": "#7b7a78",
+              "index": 13
+            },
+            "gradient": {
+              "colors": [
+                {
+                  "color": "#ba1c60",
+                  "index": -1
+                },
+                {
+                  "color": "#7b7a78",
+                  "index": 13
+                }
+              ],
+              "breakTypes": [
+                false
+              ],
+              "limits": [
+                0
+              ],
+              "limitType": "percent"
+            }
+          },
+          "autoSort": true,
+          "cId": "HVXMzjm",
+          "numFormatFromTemplate": true,
+          "measureAxis": {
+            "min": 0,
+            "max": 100
+          },
+          "conditionalColoring": {
+            "useConditionalColoring": false,
+            "singleColor": 3,
+            "paletteSingleColor": {
+              "index": 6
+            },
+            "segments": {
+              "limits": [],
+              "paletteColors": [
+                {
+                  "index": 6
+                }
+              ]
+            }
+          },
+          "isCustomFormatted": false
+        }
+      ],
+      "qEffectiveInterColumnSortOrder": [
+        0
+      ],
+      "qGrandTotalRow": [
+        {
+          "qText": "-",
+          "qNum": "NaN",
+          "qElemNumber": -1,
+          "qState": "X",
+          "qIsTotalCell": true
+        }
+      ],
+      "qDataPages": [
+        {
+          "qMatrix": [
+            [
+              {
+                "qText": "-",
+                "qNum": "NaN",
+                "qElemNumber": 0,
+                "qState": "L",
+                "qIsNull": true
+              }
+            ]
+          ],
+          "qTails": [],
+          "qArea": {
+            "qLeft": 0,
+            "qTop": 0,
+            "qWidth": 1,
+            "qHeight": 1
+          }
+        }
+      ],
+      "qPivotDataPages": [],
+      "qStackedDataPages": [],
+      "qMode": "S",
+      "qNoOfLeftDims": -1,
+      "qTreeNodesOnDim": [],
+      "qColumnOrder": []
+    },
+    "showTitles": false,
+    "title": "",
+    "subtitle": "",
+    "footnote": "",
+    "showDetails": false,
+    "showMeasureTitle": true,
+    "textAlign": "center",
+    "layoutBehavior": "responsive",
+    "fontSize": "M",
+    "useLink": false,
+    "sheetLink": "",
+    "openUrlInNewTab": true,
+    "visualization": "kpi",
+    "snapshotData": {
+      "object": {
+        "size": {
+          "w": 245,
+          "h": 94
+        }
+      },
+      "rtl": false,
+      "isZoomed": false,
+      "elementRatio": 0.3849892561137829,
+      "parent": {
+        "h": 674.4,
+        "w": 1536
+      }
+    },
+    "visualizationType": "kpi",
+    "sourceObjectId": "kDtbLP",
+    "sheetId": "752b1266-a591-4dde-bf8a-4f9d2dfcc0c7",
+    "timestamp": 1591222119445,
+    "isClone": false,
+    "supportExport": true
+  }
+]
