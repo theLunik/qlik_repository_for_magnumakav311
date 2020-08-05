@@ -1,7 +1,7 @@
 # Qlik Application Repository 
 # Magnum-Пилот по неделям - aka v3.1(1)
 ### 
-Created By theLunik at Wed Aug 05 2020 16:48:58 GMT+0300 (Москва, стандартное время)
+Created By theLunik at Wed Aug 05 2020 16:50:26 GMT+0300 (Москва, стандартное время)
 Sheet Title | Description
 ------------ | -------------
 ДАШБОРД 2|
